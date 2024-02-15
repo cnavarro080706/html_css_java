@@ -1,0 +1,59 @@
+<?php
+    include("connection.php");
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="nre.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NRE Training As a Service</title>
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <img src="../img/NRE_logo.png" class="logo">
+            <ul>
+                <li><a href="nre.html">Home</a></li>
+                <li><a href="nre_login.php">Login</a></li>
+                <li><a href="nre_contacts.html">Contacts</a></li>
+                <li><a href="nre_about.html">About</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>NRE Training Services</h1>
+            <p>This website is still on development, provide your login credentials below and choose your next step.</p>
+            <form name="form" action="login.php" method="POST">
+                <div class="box">
+                    <div class="form">
+                        <h2>Sign in</h2>
+                        <div class="inputBox">
+                            <input type="text" name="username" id="username" required>
+                            <span>Username</span>
+                            <i></i>
+                        </div>
+                        <div class="inputBox">
+                            <input type="password" name="password" id="password" required>
+                            <span>Password</span>
+                            <i></i>
+                        </div>
+                        <div class="links">
+                            <button class="login" type="submit" value="login"><span></span>Login</button>
+                            <button class="fpass" type="button"><a href="#"><span></span>Forgot Password</a></button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <!-- <div class="links">
+                <button type="submit" value="login"><span></span>Login</button>
+                <button type="button"><a href="#"><span></span> Forgot Password</a></button>
+            </div> -->
+        <div class="footer">
+            <footer>
+                <p>All Rights Reserved, NRE Global Training Team, 2023</p>
+                <p><a href="#">nretrainingasaservice@citi.google.com</a></p>
+            </footer>
+        </div>
+    </div> 
+</body>
+</html>
