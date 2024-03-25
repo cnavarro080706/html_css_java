@@ -1,0 +1,25 @@
+body {
+    background-color: rgba(92, 53, 248, 0.439);
+    color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+.requestform {
+    font-family: roboto;
+    width: 400px;
+    background-color: rgb(55, 55, 148);
+    border-radius: 12px;
+    color: whitesmoke;
+    padding: 0px 80px 30px 35px;
+    text-align: center;
+}
+
+.inputBox {
+    font-size: 15px;
+    padding: 1px;
+
+}
+.

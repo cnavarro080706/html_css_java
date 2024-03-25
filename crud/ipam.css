@@ -1,0 +1,5 @@
+/* Override default padding for columns */
+.no-gutters .col-xl-3,
+.no-gutters .col-md-6 {
+    padding: 0;
+}

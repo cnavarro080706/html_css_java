@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    /* background: linear-gradient(90deg, rgba(5,0,36,1) 0%, rgba(122,122,251,1) 0%, rgba(44,41,108,1) 0%, rgba(81,152,252,1) 6%, rgba(72,159,252,1) 45%, rgba(59,169,253,1) 57%, rgba(53,173,253,1) 91%, rgba(98,0,255,0.969625350140056) 99%, rgba(55,18,115,0.969625350140056) 100%); */
+    background:#0b6dd6;
+    font-family: 'Poppins', sans-serif;
+}
+form {
+    width: 24%;
+    background-color: white;
+    padding: 50px;
+    border-radius: 20px;
+    margin-top: 150px;
+}
+
+.form-control {
+    color: black;
+    border-bottom-color: rgba(0,0,0,.42);
+    box-shadow: none !important;
+    border: none;
+    border-bottom: 1px solid;
+    border-radius: 4px 4px 0 0;
+
+}
+h4 {
+    font-size: 2rem !important;
+    font-weight: 700;
+}
+.form-label {
+    font-family: 800 !important;
+}
+@media only screen and (max-width:600px){
+    form{
+        width: 100% !important;
+    }
+}
+/* fieldset select .form-select{ */
+    /* font-size: 14px;  */
+    /* color: black; */
+/* } */

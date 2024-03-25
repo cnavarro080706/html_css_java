@@ -1,136 +1,146 @@
 body {
     background-color: rgba(92, 53, 248, 0.439);
+    margin: 0;
+    font-family: Roboto;
 }
-.navbar{
-    background-color: rgb(55, 55, 148);
-    display: flow-root;
-    padding: 0;
-}
-/* .version {
-    font-family: Arial;
-    background-color: rgb(55, 55, 148);
-    color: whitesmoke;
-    font-size: small;
-    margin-top: 34px;
-    margin-left: 0px;
-    float: left; */
-/* } */
-.header-right{
-    font-family: roboto;
-    overflow: hidden;
-    vertical-align: top;
-    transition: background-color 0.15s, color 0.15s;
-    position: relative;
-    margin: 20px;
-    float: right;
-}
-.service-title {
-    font-family: roboto;
-    margin-left: 20px; 
-    padding-left: 16px;
-    padding-top: 8px;
-    padding-right: 16px;
-    padding-bottom: 8px;
-    background-color: rgb(55, 55, 148);
-    color: whitesmoke;
-    float: left;
 
+.navbar {
+    background-color: rgb(55, 55, 148);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}   
+.navbar h3 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
 }
+.navbar h6 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+} 
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
 .search-bar {
     font-size: 14px;
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding: 4px;
     border: none;
 }
-.service-request {
-    background-color:rgb(10, 100, 160);
+
+.button {
+    background-color: rgb(10, 100, 160);
     color: white;
     font-weight: bold;
     font-size: 13px;
     border-radius: 18px;
     cursor: pointer;
-    padding-left: 16px;
-    padding-top: 8px;
-    padding-right: 16px;
-    padding-bottom: 8px;
+    padding: 8px 16px;
+    margin-left: 10px;
     border: none;
     transition: background-color 0.15s, color 0.15s;
 }
-.service-request:hover {
+
+.button:hover {
     background-color: white;
     color: rgb(41, 118, 211);
 }
-.service-request:active {
+
+.button:active {
     opacity: 0.7;
 }
-.service-settings {
-    background-color: rgb(55, 55, 148);
-    color: white;
-    border-radius: 8px;
+.request {
+    background-color: white;
+    color: rgb(10, 100, 160);
+
+    font-weight: bold;
+    font-size: 13px;
+    border-radius: 18px;
     cursor: pointer;
-    padding-left: 16px;
-    padding-top: 8px;
-    padding-right: 16px;
-    padding-bottom: 8px;
-    border: none;
-    transition: background-color 0.15s, color 0.15s;
-}
-.service-settings:hover {
-    background-color: rgb(41, 118, 211);
-    color: white;
-}
-.service-settings:active {
-    opacity: 0.7;
-}
-.service-profile {
-    background-color:rgb(55, 55, 148);
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
-    padding-left: 16px;
-    padding-top: 8px;
-    padding-right: 16px;
-    padding-bottom: 8px;
-    border: none;
-    transition: background-color 0.15s, color 0.15s;
-}
-.service-profile:hover {
-    background-color: rgb(41, 118, 211);
-    color: white;
-}
-.service-profile:active {
-    opacity: 0.7;
-}
-.service-logout {
-    background-color:white;
-    color: rgb(41, 118, 211);
-    border-radius: 8px;
-    cursor: pointer;
-    padding-left: 16px;
-    padding-top: 8px;
-    padding-right: 16px;
-    padding-bottom: 8px;
-    border: none;
-    transition: background-color 0.15s, color 0.15s;
-}
-.service-logout:hover {
-    background-color: rgb(41, 118, 211);
-    color: white;
-}
-.service-logout:active {
-    opacity: 0.7;
-}
-main {
-    font-family: roboto;
-    font-size: 12px;
-    display: flex;
+    padding: 8px 16px;
     margin-left: 10px;
+    border: none;
+    transition: background-color 0.15s, color 0.15s;
+    animation: transitionIn .75s ease-in;
 }
-/* 
-main .top {
-    float: left;
-    margin-right: 10px;
+
+.request:hover {
+    background-color: rgb(10, 100, 160);
+    color: white
 }
-main .box {
-    float: right;
-} */
+
+.request:active {
+    opacity: 0.7;
+}
+
+#requestForm {
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    margin-top: 200px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+select {
+    width: calc(100% - 10px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.hidden {
+    display: none;
+}
+.devices {
+    text-align: center;
+    margin-top: 50px;
+
+}
+.table-responsive {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.table {
+    width: 90%; /* Adjust table width as needed */
+    margin: 0 auto; /* Center the table horizontally */
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 8px;
+    border: 1px solid #ddd; /* Border color */
+    text-align: center;
+}
+
+.table th {
+    background-color: #6c757d; /* Header background color */
+    color: #fff; /* Header text color */
+}

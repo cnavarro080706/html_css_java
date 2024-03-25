@@ -1,0 +1,510 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Remove scrollbars */
+    font-family: sans-serif;
+}
+.banner {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("../img/circuit-board.jpg");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+}
+.navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    width: 13%;
+    height: 13%;
+    cursor: pointer;
+    transition: transform 1s;
+
+}
+.logo:hover {
+    transform: rotate(360deg) translateZ(0); 
+}
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position:relative;
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+.navbar ul li #logout {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: "";
+    height: 3px;
+    width: 0%;
+    background-color: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after {
+    width: 100%;
+}
+.content {
+    width: 100%;
+    top: 60%;
+    position: absolute;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+
+}
+.content h1 {
+    /* margin-bottom: 50px; */
+    font-size: 70px;
+    transition: 0.5s;
+}
+.content h1:hover {
+    color: #009688;
+
+}
+.content p {
+    /* margin: auto; */
+    font-weight: 100;
+    line-height: 25px;
+    /* margin-bottom: 20px; */
+}
+button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    /* margin: 20px 10px; */
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+button a{
+    text-decoration: none;
+    color: white;
+}
+.login{
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+.fpass{
+    margin-bottom: 20px;
+}
+span{
+    background: #009688;
+    height: 100%;
+    width: 0%;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+button:hover span {
+    width: 100%;
+}
+button:hover {
+    border: none;
+}
+button:active{
+    opacity: 0.8;
+}
+.footer {
+    text-align: center;
+    padding: 3px;
+    color: white;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    position: relative;
+
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
+.box {
+    position: relative;
+    margin: auto;
+    max-width: 500%;
+    width: 380px;
+    height: 420px;
+    background:#1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+    animation: transitionIn .75s ease-in;
+}
+@keyframes transitionIn {
+
+    from {
+        opacity: 0;
+        transform: rotateY(0deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(45);
+    }
+}
+.box::before{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    /* background: linear-gradient(0deg, transparent, #45f3ff); */
+    background: linear-gradient(0deg,transparent, #45f3ff,blue,red,yellow,indigo,violet);
+    transform-origin: bottom right;
+    animation: animate_box 6s linear infinite;
+}
+.box::after{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    /* background: linear-gradient(0deg, transparent, #45f3ff); */
+    background: linear-gradient(0deg,transparent, #45f3ff,blue,red,yellow,indigo,violet);
+    transform-origin: bottom right;
+    animation: animate_box 6s linear infinite;
+    animation-delay: -3s;
+}
+@keyframes animate_box
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+.form{
+    position: absolute;
+    inset: 2px;
+    border-radius: 8px;
+    background: #28292d;
+    z-index: 10;
+    padding: 50px 40px;
+    flex-direction: column;
+}
+.form h2{
+    color:  #009688;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+}
+.inputBox{
+    position: relative;
+    width: 300px;
+    margin-top: 45px;
+}
+.inputBox input{
+    position: relative;
+    width: 100%;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color:white;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    z-index: 10;
+}
+.inputBox span{
+    position: absolute;
+    left: 0;
+    padding-bottom:10px;
+    font-size: 1em;
+    color:white;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span
+{
+    color: #009688;
+    transform: translateX(-10px) translateY(-34px);
+    font-size: 0.75em;
+}
+.inputBox i{
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 2px;
+    background: #009688;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 9;
+}
+.inputBox input:valid ~ i,
+.inputBox input:focus ~ i
+{
+    height: 44px;
+}
+.domain{
+    position: relative;
+    color: #009688;
+    font-weight: bold;
+    margin: auto;
+    margin-bottom: 150px;
+    padding: 15px 10px;
+    border: 2px solid white;
+    width: 600px;
+    height: 350px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+}
+.data_center{
+    color: white;
+    position: relative;
+    width: 200px;
+    height: 150px;
+    background-color: #ccc;
+    margin: 0 10px;
+}  
+.peripheral{
+    color: white;
+    position: relative;
+    width: 200px;
+    height: 150px;
+    background-color: #ccc;
+    margin: 0 10px;
+}
+.perimeter{
+    color: white;
+    position: relative;
+    width: 200px;
+    height: 150px;
+    background-color: #ccc;
+    margin: 0 10px;
+}
+/* Style for the text inside the box */
+.text-box {
+    position: relative;
+    margin-top: 150px;
+    /* bottom: 20px; */
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+}
+a {
+    color:#0ee8c0;
+    text-decoration: none;
+}
+/* Style for the image overlay */
+.image-overlay {
+    position: absolute;
+    /* border-radius: 50%; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#scroll_container {
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 20px 40px;
+    overflow: hidden;
+  }
+  
+  #scroll_text {
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: scroll;
+    cursor: pointer;
+
+  }
+ /* Split the screen in half */
+.split {
+    height: 75%;
+    margin-top: 220px;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  /* Control the left side */
+  .left {
+    color: whitesmoke;
+    left: 0;
+    background-color: black;
+  }
+  
+  /* Control the right side */
+  .right {
+    
+    right: 0;
+    background-color: white;
+  }
+  
+  /* If you want the content centered horizontally and vertically */
+  .centered {
+    /* margin-top: 50px; */
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+  }
+  
+  /* Style the image inside the centered container, if needed */
+  .centered img {
+    width: 150px;
+    border-radius: 50%;
+  }
+  .ratio {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 66.66%; /* 3:2 Aspect Ratio */
+  }
+  
+  .embed-responsive-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+    /* Additional CSS styles */
+    #progressBar {
+        margin-top: 20px;
+    }
+
+    .iframe-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+    .visually-hidden {
+        opacity: 0;
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px; /* To avoid the element collapsing */
+        overflow: hidden;
+        clip: rect(0 0 0 0); /* For IE support */
+        white-space: nowrap; /* For avoiding content overflow */
+        border: 0;
+        font-size: 0;
+        line-height: 0;
+        clip-path: inset(100%); /* Optional for modern browsers */
+      }
+      
+    /* Ensures the element is still announced by screen readers */
+    .visually-hidden:not(:focus), .visually-hidden:not(:active) {
+    clip-path: auto;
+    white-space: inherit;
+    width: auto;
+    height: auto;
+    margin: 0;
+    position: static;
+    opacity: 1;
+    font-size: inherit;
+    line-height: inherit;
+    border: inherit;
+    padding: inherit;
+    }
+
+ul li {
+  cursor: pointer;
+  color: white;
+}
+ul li:hover {
+  color: rgb(210, 21, 210);
+}
+ul li .link{
+    cursor: pointer;
+    color: white;
+  }
+  ul li .link:hover {
+    color:  rgb(210, 21, 210);
+  }
+  #prev {
+    color: white;
+  }
+  #prev:hover {
+    color: black;
+    background-color: white;
+  }
+  #next {
+    color: white;
+  }
+  #next:hover {
+    color: black;
+    background-color: white;
+  }
+  #initializeButton {
+    color: white;
+  }
+  #initializeButton:hover {
+    color: black;
+    background-color: white;
+  }
+  #closeButton {
+    color: white;
+  }
+  #closeButton:hover {
+    color: black;
+    background-color: white;
+  }
+  .table {
+    color: white;
+    font-size: 12px;
+  }
+
+  .perimeter-img {
+
+    margin-left: 110px;
+    max-width: 606px;
+    max-height: 525px;
+
+  }
